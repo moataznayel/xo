@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #eeeeee;
+}
+p{
+    font-size: 7rem;
+    height: 168px;
+  
+}
+p:hover{
+    background-color: #bdbdbd !important;
+}
+.color{
+    background-color: #bdbdbd !important;
+    color:#dc3545;
+}
