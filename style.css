@@ -1,19 +1,42 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Roboto', sans-serif;
-    background-color: #eeeeee;
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Rubik", sans-serif;
+  background-color: #eeeeee;
 }
-p{
-    font-size: 7rem;
-    height: 168px;
-  
+
+p {
+  font-size: 7rem;
+  height: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-p:hover{
-    background-color: #bdbdbd !important;
+p:hover {
+  background-color: #bdbdbd !important;
 }
-.color{
-    background-color: #bdbdbd !important;
-    color:#dc3545;
+.color {
+  background-color: #bdbdbd !important;
+  color: #dc3545;
+}
+.title {
+  padding: 10px 0 !important;
+}
+@media (max-width: 768px) {
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrap-card {
+    width: 1000%;
+  }
+  p {
+    font-size: 3rem;
+    height: 100px;
+  }
 }

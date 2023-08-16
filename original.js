@@ -35,8 +35,21 @@ function winner() {
     reload(1, 5, 9);
   } else if (box[3] === box[5] && box[5] === box[7] && box[7] !== "") {
     reload(3, 5, 7);
+  } else if (
+    box[1] &&
+    box[2] &&
+    box[3] &&
+    box[4] &&
+    box[5] &&
+    box[6] &&
+    box[7] &&
+    box[8] &&
+    box[9] != ""
+  ) {
+    gameOver();
   }
 }
+
 function reload(num1, num2, num3) {
   title.innerHTML = `${box[num1]} winner`;
   document.getElementById("item" + num1).classList.add("color");
@@ -46,6 +59,20 @@ function reload(num1, num2, num3) {
     title: `${box[num1]} winner`,
     text: "New Game",
     icon: "success",
+    button: "OK",
+  }).then((value) => {
+    if (value) {
+      location.reload();
+    }
+  });
+}
+function gameOver() {
+  title.innerHTML = `Game Over`;
+
+  swal({
+    title: `Game Over`,
+    text: "New Game",
+    icon: "error",
     button: "OK",
   }).then((value) => {
     if (value) {
